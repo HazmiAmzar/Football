@@ -87,7 +87,7 @@ def load(transform_teams_data):
             print("Collection doesnt exist yet and creating a new one")
         
     except errors.ConnectionFailure as e:
-        print("An error occurred with MongoDB connection:", e)
+        print("Could not connect to MongoDB:", e)
 
 etd = extract_from_api()
 ttd = transform(etd)
